@@ -39,3 +39,16 @@ while True:
             seen.add(key)
 
     time.sleep(60 * 15)
+
+from discord_alert import send_discord_alert
+
+test_filing = {
+    'ticker': 'TEST',
+    'investor': 'Warren Buffett',
+    'type': '13F',
+    'url': 'https://www.sec.gov/Archives/edgar/data/0000000000/0000000000-00-000000-index.htm',
+    'exchange': 'NASDAQ',
+    'date': '2025-07-15'
+}
+send_discord_alert(test_filing, news_url="https://finance.yahoo.com/news/example-news")
+
